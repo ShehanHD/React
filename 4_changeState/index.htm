@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="print"></div>
+    
+    <script type="text/babel">
+        class Print extends React.Component {
+            state = {
+                name: "Shehan",
+                age: 26
+            }
+            handleClick = (e) =>{      //quando usiamo il arrow function il "this" vale a qulsiasi cosa fuori dalla funziona è il ogetto
+                this.setState({
+                    name:"Don"
+                })
+                console.log(this.state);
+            }
+            render(){
+                return(
+                    <div className="content">
+                        <h1>My Self</h1>
+                        <p>My name is <b>{ this.state.name }</b> and i'm <b>{ this.state.age }</b></p>
+                        <button onClick={ this.handleClick }>Click</button>
+                    </div>
+                );
+            }
+        }
+
+        ReactDOM.render(<Print />, document.getElementById("print"));
+    </script>
+</body>
+</html>
