@@ -1,38 +1,24 @@
 import React, { Component } from 'react';
-import Todos from './todos';
-import AddTodo from './addTodo';
+import NavBar from './component/navBar';
+import Home from './component/Home';
+import About from './component/About';
+import Contact from './component/Contact';
+import { BrowserRouter, Router, Route } from 'react-router-dom'
+
 
 class App extends Component {
-  state = {
-    todo: [
-      {id: 1, content: "test 1"},
-      {id: 2, content: "test 2"}
-    ]
-  }
-  delTodo = (id) => {
-    const todo = this.state.todo.filter(item => {
-      return id !== item.id;
-    });
-    this.setState({
-      todo
-    })
-  }
 
-  addTodo = (newTodo) => {
-    newTodo.id = Math.round(Math.random()*100)
-      const todo = [...this.state.todo , newTodo];
-      this.setState({
-        todo
-      })
-  }
 
   render(){
     return (
-      <div className="App">
-        <h1 className="center blue-text">TODO LIST</h1>
-        <Todos list={ this.state.todo } delTodo={ this.delTodo }/>
-        <AddTodo addTodo={ this.addTodo }/>
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <NavBar />
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+        </div>
+      </BrowserRouter>
     );
   }
 }
