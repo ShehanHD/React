@@ -20,12 +20,20 @@ class App extends Component {
          data : copyData
       });
    }
+   delData = (id) => {
+      let filterData = this.state.data.filter( getData => {
+        return getData.id !== id ? true : false;
+      });
+      this.setState({
+        data : filterData
+      });
+   }
   render() { 
     return ( 
       <div>
         <h1>App</h1>
         <AddUser newData={ this.newData }/>
-        <Data data={ this.state.data }/>
+        <Data data={ this.state.data } delData={ this.delData }/>
       </div>
     );
   }
