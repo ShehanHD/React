@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { deletePost } from '../actions/actionsPosts';
 
 class Post_detail extends Component {
     
     handleClick = () => {
         this.props.deletePost(this.props.post.id);
-        this.props.history.push('/posts/')
+        this.props.history.goBack();
     }
 
     render() { 
@@ -38,7 +39,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispach) => {
     return{
-        deletePost: (id) => { dispach({ type: 'DELETE_POST', id:id}) }
+        deletePost: (id) => { dispach(deletePost(id)) }
     }
 }
  
