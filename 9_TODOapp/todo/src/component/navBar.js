@@ -4,7 +4,7 @@ import { Link, NavLink, withRouter } from 'react-router-dom'
 
 const NavBar = () =>{
     return(
-        <nav className="nav-wrapper purple  darken-4">
+        <nav className="nav-wrapper purple z-depth-3 darken-4">
             <div className="container">
                 <span className="brand-logo left">weCode</span>
                 <ul className="right">
