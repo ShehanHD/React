@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, withRouter } from 'react-router-dom'
 
 
 const NavBar = () =>{
@@ -8,8 +8,9 @@ const NavBar = () =>{
             <div className="container">
                 <a className="brand-logo left">weCode</a>
                 <ul className="right">
-                    <li><NavLink to="/">Home</NavLink></li>
-                    <li><NavLink to="/about">About</NavLink></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><NavLink to="/posts">Posts</NavLink></li>
+                    <li><NavLink to="/todo">Todo List</NavLink></li>
                     <li><NavLink to="/contact">Contact</NavLink></li>
                 </ul>
             </div>
@@ -17,4 +18,4 @@ const NavBar = () =>{
     )
 }
 
-export default NavBar;
+export default withRouter(NavBar);

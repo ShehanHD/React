@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Todos from './app/TODO/todos';
-import AddTodo from './app/TODO/addTodo';
+import Todos from './todos';
+import AddTodo from './addTodo';
 
-class App extends Component {
+class AppTodo extends Component {
   state = {
     todo: [
       {id: 1, content: "test 1"},
@@ -37,4 +37,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default AppTodo;
