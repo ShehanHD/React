@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { v1 as uuidv1 } from 'uuid';
 import NewSongForm from './NewSong';
 
@@ -9,11 +9,16 @@ const SongList = () => {
         {title: 'aaa', id:2},
         {title: 'abc', id:3}
     ]);
-
+    const [count, setCount] = useState(0);
     const addSong = (title) => {
         setSongs([...songs, { title , id: uuidv1() }])
     }
-
+    useEffect(() => {
+        console.log("useEffect " + songs);
+    }, [songs])
+    useEffect(() => {
+        console.log("useEffect " + count);
+    }, [count])
     return(
         <div className="center">
             <ul className="collection">
@@ -22,6 +27,7 @@ const SongList = () => {
                 })}
             </ul>
             <NewSongForm addSong={ addSong }></NewSongForm>
+            <button style={{margin: "5px"}} className="btn-small" onClick={() => setCount(count+1)}>Count</button>
         </div>
     );
 }
