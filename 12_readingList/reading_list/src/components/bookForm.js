@@ -5,6 +5,7 @@ const BookForm = () => {
     const { dispatch } = useContext(BookContext);
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch({ type:'ADD_BOOK', book: {
@@ -14,6 +15,7 @@ const BookForm = () => {
         setTitle("");
         setAuthor("");
     }
+
     return ( 
         <form onSubmit={handleSubmit}>
             <input type="text" placeholder="Book Title" value= {title} 
@@ -22,7 +24,7 @@ const BookForm = () => {
             onChange={(e) => { setAuthor(e.target.value) }} required/>  
             <input type="submit" value="Submit"/>      
         </form>
-     );
+    );
 }
- 
+
 export default BookForm;

@@ -26,7 +26,7 @@ class Posts extends Component {
                 <h1 className="purple-text center">Posts</h1>
                 {postList}
             </div>
-         );
+        );
     }
 }
  
