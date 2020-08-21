@@ -1,0 +1,27 @@
+body {
+    height: 100vh;
+    background: -webkit-linear-gradient(45deg, rgba(149, 149, 149, 1) 0%, rgba(13, 13, 13, 1) 46%, rgba(1, 1, 1, 1) 50%, rgba(10, 10, 10, 1) 53%, rgba(78, 78, 78, 1) 76%, rgba(56, 56, 56, 1) 87%, rgba(27, 27, 27, 1) 100%);
+}
+
+.file {
+    margin-bottom: 10px;
+    height: 70px;
+    line-height: 70px;
+    vertical-align: middle;
+    text-align: center;
+    background: -webkit-linear-gradient(45deg, rgb(138, 146, 153) 0%,rgb(62, 67, 70) 100%);
+    box-shadow: #606166 0 0 3px 2px;
+}
+
+.submit {
+    width: 100%;
+    margin-top: 1% !important;
+}
+
+.MuiTypography-root{
+    color: blue;
+}
+
+.MuiButton-textPrimary{
+    color: rgb(0, 174, 255) !important;
+}

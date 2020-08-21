@@ -1,15 +1,14 @@
-import React, { Component } from 'react';
-import NavBar from './component/navBar';
-import Home from './component/Home';
-import Todo from './component/Todo';
-import Contact from './component/Contact';
-import Posts from './component/Posts';
-import Post_detail from './component/Post_detail';
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
-
+import React, { Component } from "react";
+import NavBar from "./component/navBar";
+import Home from "./component/Home";
+import Todo from "./component/Todo";
+import Contact from "./component/Contact";
+import Posts from "./component/Posts";
+import Post_detail from "./component/Post_detail";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 class App extends Component {
-  render(){
+  render() {
     return (
       <BrowserRouter>
         <div className="App">
