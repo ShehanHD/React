@@ -1,10 +1,14 @@
 .side-bar {
     background-color: rgb(46, 46, 46) !important;
     color: antiquewhite;
-    height: 95vh;
+    height: 100vh;
     border: none;
-    padding: 1em;
-    overflow-y: scroll;
+    padding: 8vh 2vh 2vh 2vh;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     .divider {
         background-color: beige !important;
@@ -59,11 +63,13 @@
         }
     }
 
+    .job-card {
 
-    .list-btn {
-        color: white !important;
-        background-color: rgb(78, 78, 78);
-        height: 20px;
-        margin-left: 5px !important;
+        .list-btn {
+            color: white !important;
+            background-color: rgb(78, 78, 78);
+            height: 20px;
+            margin: 0 5px 5px 0 !important;
+        }
     }
 }

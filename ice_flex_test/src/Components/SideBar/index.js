@@ -73,7 +73,7 @@ export default Index
 export const JobCard = ({ data }) => {
     return (
         <>
-            <div>
+            <div className={'job-card'} >
                 <p>DummyCustomer - {data.el_order.el_customer.business_name}</p>
                 <p>DummyArticle | {data.el_article.article_code}</p>
                 <p>Requested {data.requested} + {data.additional}</p>
@@ -82,11 +82,11 @@ export const JobCard = ({ data }) => {
                 <p>Estimated_end-Duration:  {data.duration || 'not specified'} </p>
                 <p>Mold: {data.el_mold_version.mold_version_code} </p>
 
-                <Button size={'small'} className={'list-btn'} variant={'contained'}>Drag-me <i className="fas fa-arrows-alt"></i></Button>
-                <Button size={'small'} className={'list-btn'} variant={'contained'}>add <i className="fas fa-plus-circle"></i></Button>
-                <Button size={'small'} className={'list-btn'} variant={'contained'}>mold <i className="fas fa-tags"></i></Button>
-                <Button size={'small'} className={'list-btn'} variant={'contained'}>delete <i className="fas fa-trash-alt"></i></Button>
-                <Button size={'small'} className={'list-btn'} variant={'contained'}>info <i className="fas fa-eye"></i></Button>
+                <Button size={'small'} className={'list-btn'} variant={'contained'}><i className="fas fa-arrows-alt"></i> Drag-me </Button>
+                <Button size={'small'} className={'list-btn'} variant={'contained'}><i className="fas fa-plus-circle"></i> Add</Button>
+                <Button size={'small'} className={'list-btn'} variant={'contained'}><i className="fas fa-tags"></i> Mold</Button>
+                <Button size={'small'} className={'list-btn'} variant={'contained'}><i className="fas fa-trash-alt"></i> Delete</Button>
+                <Button size={'small'} className={'list-btn'} variant={'contained'}><i className="fas fa-eye"></i> Info</Button>
 
             </div>
             <Divider className={'divider'} />
