@@ -39,8 +39,8 @@ const Index = () => {
 
                 <div>
                     List_order_by:
-                    <Button size={'small'} className={'filter-btn'} variant={'contained'}>Drag Job-Cleaner</Button>
-                    <Button size={'small'} className={'filter-btn'} variant={'contained'}>Drag Job-Cleaner</Button>
+                    <Button size={'small'} className={'filter-btn'} variant={'contained'}>delivery_date</Button>
+                    <Button size={'small'} className={'filter-btn'} variant={'contained'}>entrance_id</Button>
                 </div>
             </div>
 
