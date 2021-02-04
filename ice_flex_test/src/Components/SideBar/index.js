@@ -4,8 +4,6 @@ import '../../Styles/sidebar.scss';
 
 const Index = () => {
     const [data, setData] = useState([]);
-    const [article, setArticle] = useState({});
-    const [customer, setCustomer] = useState({})
 
     useEffect(() => {
         getData();
@@ -16,11 +14,6 @@ const Index = () => {
         let value = await res.json();
 
         setData(value)
-
-        data.forEach(element => {
-            setArticle(element.el_article);
-            setCustomer(element.el_order.el_customer);
-        });
     }
 
     return (
@@ -53,7 +46,7 @@ const Index = () => {
 
             <Divider className={'divider'} />
             {data && data.map(element => {
-                return <JobCard key={element.id} data={element} article={article} customer={customer} />
+                return <JobCard key={element.id} data={element} />
             })}
         </>
     )
@@ -61,17 +54,17 @@ const Index = () => {
 
 export default Index
 
-export const JobCard = ({ data, article, customer }) => {
+export const JobCard = ({ data }) => {
     return (
         <>
             <div>
-                <p>DummyCustomer - {customer && customer.business_name}</p>
-                <p>DummyArticle | { }</p>
+                <p>DummyCustomer - {data.el_order.el_customer.business_name}</p>
+                <p>DummyArticle | {data.el_article.article_code}</p>
                 <p>Requested {data.requested} + {data.additional}</p>
-                <p>Order { } of { }</p>
-                <p>Delivery_date {data.delivery_date} </p>
+                <p>Order {data.el_order.order_code} of {data.el_order.order_date}</p>
+                <p>Delivery_date {data.el_order.delivery_date} </p>
                 <p>Estimated_end-Duration:  {data.duration || 'not specified'} </p>
-                <p>Mold: { } </p>
+                <p>Mold: {data.el_mold_version.mold_version_code} </p>
 
                 <Button size={'small'} className={'list-btn'} variant={'contained'}>Drag-me <i className="fas fa-arrows-alt"></i></Button>
                 <Button size={'small'} className={'list-btn'} variant={'contained'}>add <i className="fas fa-plus-circle"></i></Button>
