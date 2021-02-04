@@ -82,7 +82,7 @@
         "el_article": {
             "id": 1,
             "el_customer_id": 1,
-            "article_code": "ART0001",
+            "article_code": "ART0002",
             "short_descr": "DummyArticle",
             "description": "DummyArticle",
             "weight": 1.0,
@@ -199,7 +199,7 @@
         "el_article": {
             "id": 1,
             "el_customer_id": 1,
-            "article_code": "ART0001",
+            "article_code": "ART0341",
             "short_descr": "DummyArticle",
             "description": "DummyArticle",
             "weight": 1.0,
@@ -212,7 +212,7 @@
             "el_customer_id": 1,
             "order_date": "2019-01-30T08:17:03.634079+00:00",
             "delivery_date": "2025-01-30T23:00:00+00:00",
-            "order_code": "ORD0001",
+            "order_code": "ORD024",
             "percentage": 50.988522985698495,
             "short_descr": "ProvaSnifferGenerico",
             "note": "",
@@ -316,7 +316,7 @@
         "el_article": {
             "id": 1,
             "el_customer_id": 1,
-            "article_code": "ART0001",
+            "article_code": "ART02451",
             "short_descr": "DummyArticle",
             "description": "DummyArticle",
             "weight": 1.0,
@@ -329,7 +329,7 @@
             "el_customer_id": 1,
             "order_date": "2019-01-30T08:17:03.634079+00:00",
             "delivery_date": "2025-01-30T23:00:00+00:00",
-            "order_code": "ORD0001",
+            "order_code": "ORD5141",
             "percentage": 50.988522985698495,
             "short_descr": "ProvaSnifferGenerico",
             "note": "",
@@ -345,7 +345,7 @@
                 "city": "",
                 "postal_code": "",
                 "nationality": "",
-                "customer_code": "CU0001",
+                "customer_code": "CU0424",
                 "dismissed": false
             }
         }
@@ -433,7 +433,7 @@
         "el_article": {
             "id": 1,
             "el_customer_id": 1,
-            "article_code": "ART0001",
+            "article_code": "ART3546",
             "short_descr": "DummyArticle",
             "description": "DummyArticle",
             "weight": 1.0,
@@ -446,7 +446,7 @@
             "el_customer_id": 1,
             "order_date": "2019-01-30T08:17:03.634079+00:00",
             "delivery_date": "2025-01-30T23:00:00+00:00",
-            "order_code": "ORD0001",
+            "order_code": "ORD3456",
             "percentage": 50.988522985698495,
             "short_descr": "ProvaSnifferGenerico",
             "note": "",
@@ -550,7 +550,7 @@
         "el_article": {
             "id": 1,
             "el_customer_id": 1,
-            "article_code": "ART0001",
+            "article_code": "ARTe4321",
             "short_descr": "DummyArticle",
             "description": "DummyArticle",
             "weight": 1.0,
@@ -563,7 +563,7 @@
             "el_customer_id": 1,
             "order_date": "2019-01-30T08:17:03.634079+00:00",
             "delivery_date": "2025-01-30T23:00:00+00:00",
-            "order_code": "ORD0001",
+            "order_code": "ORD354765",
             "percentage": 50.988522985698495,
             "short_descr": "ProvaSnifferGenerico",
             "note": "",
@@ -667,7 +667,7 @@
         "el_article": {
             "id": 1,
             "el_customer_id": 1,
-            "article_code": "ART0001",
+            "article_code": "ART3543",
             "short_descr": "DummyArticle",
             "description": "DummyArticle",
             "weight": 1.0,
@@ -680,7 +680,7 @@
             "el_customer_id": 1,
             "order_date": "2019-01-30T08:17:03.634079+00:00",
             "delivery_date": "2025-01-30T23:00:00+00:00",
-            "order_code": "ORD0001",
+            "order_code": "ORD3454",
             "percentage": 50.988522985698495,
             "short_descr": "ProvaSnifferGenerico",
             "note": "",
@@ -696,7 +696,7 @@
                 "city": "",
                 "postal_code": "",
                 "nationality": "",
-                "customer_code": "CU0001",
+                "customer_code": "CU04501",
                 "dismissed": false
             }
         }
@@ -784,7 +784,7 @@
         "el_article": {
             "id": 1,
             "el_customer_id": 1,
-            "article_code": "ART0001",
+            "article_code": "ART3541",
             "short_descr": "DummyArticle",
             "description": "DummyArticle",
             "weight": 1.0,
@@ -797,7 +797,7 @@
             "el_customer_id": 1,
             "order_date": "2019-04-01T09:53:52.623779+00:00",
             "delivery_date": "2025-01-27T23:00:00+00:00",
-            "order_code": "ORD0003",
+            "order_code": "ORD3453",
             "percentage": 5.9796716517381086,
             "short_descr": "ProvaCellaGenerico",
             "note": "",
@@ -813,7 +813,7 @@
                 "city": "",
                 "postal_code": "",
                 "nationality": "",
-                "customer_code": "CU0001",
+                "customer_code": "CU3541",
                 "dismissed": false
             }
         }

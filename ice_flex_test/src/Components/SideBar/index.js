@@ -12,8 +12,23 @@ const Index = () => {
     const getData = async () => {
         let res = await fetch('./data/response.json')
         let value = await res.json();
-
         setData(value)
+    }
+
+    const handleSearch = (e) => {
+        let searchString = e.target.value;
+
+        let filtered = data.map(item => {
+            item.show =
+                item.el_article.article_code.toUpperCase().includes(searchString.toUpperCase())
+                || item.el_order.order_code.toUpperCase().includes(searchString.toUpperCase())
+                || item.el_order.el_customer.business_name.toUpperCase().includes(searchString.toUpperCase())
+                || item.el_order.el_customer.customer_code.toUpperCase().includes(searchString.toUpperCase());
+            return item;
+        });
+
+        console.log(filtered);
+        setData(filtered);
     }
 
     return (
@@ -35,6 +50,7 @@ const Index = () => {
                     placeholder="Search_Job"
                     helperText="Enter Unique Keywords To quickly Find Your Job"
                     fullWidth={true}
+                    onChange={handleSearch}
                 />
 
                 <div>
@@ -46,7 +62,7 @@ const Index = () => {
 
             <Divider className={'divider'} />
             {data && data.map(element => {
-                return <JobCard key={element.id} data={element} />
+                return (element.show || element.show === undefined) && <JobCard key={element.id} data={element} />
             })}
         </>
     )
