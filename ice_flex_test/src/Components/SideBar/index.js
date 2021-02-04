@@ -65,7 +65,7 @@ export const JobCard = ({ data }) => {
                 <p>Order { } of { }</p>
                 <p>Delivery_date {data.delivery_date} </p>
                 <p>Estimated_end-Duration:  {data.duration || 'not specified'} </p>
-                <p>Mold: { } of </p>
+                <p>Mold: { } </p>
 
                 <Button size={'small'} className={'list-btn'} variant={'contained'}>Drag-me <i className="fas fa-arrows-alt"></i></Button>
                 <Button size={'small'} className={'list-btn'} variant={'contained'}>add <i className="fas fa-plus-circle"></i></Button>
