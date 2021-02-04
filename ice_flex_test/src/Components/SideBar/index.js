@@ -4,6 +4,8 @@ import '../../Styles/sidebar.scss';
 
 const Index = () => {
     const [data, setData] = useState([]);
+    const [article, setArticle] = useState({});
+    const [customer, setCustomer] = useState({})
 
     useEffect(() => {
         getData();
@@ -12,8 +14,13 @@ const Index = () => {
     const getData = async () => {
         let res = await fetch('./data/response.json')
         let value = await res.json();
-        console.log(value)
+
         setData(value)
+
+        data.forEach(element => {
+            setArticle(element.el_article);
+            setCustomer(element.el_order.el_customer);
+        });
     }
 
     return (
@@ -45,9 +52,8 @@ const Index = () => {
             </div>
 
             <Divider className={'divider'} />
-            <JobCard data={"s"} />
-            {data.map(element => {
-                return <JobCard key={element.id} data={element} />
+            {data && data.map(element => {
+                return <JobCard key={element.id} data={element} article={article} customer={customer} />
             })}
         </>
     )
@@ -55,11 +61,11 @@ const Index = () => {
 
 export default Index
 
-export const JobCard = ({ data }) => {
+export const JobCard = ({ data, article, customer }) => {
     return (
         <>
             <div>
-                <p>DummyCustomer - { }</p>
+                <p>DummyCustomer - {customer && customer.business_name}</p>
                 <p>DummyArticle | { }</p>
                 <p>Requested {data.requested} + {data.additional}</p>
                 <p>Order { } of { }</p>
@@ -71,7 +77,7 @@ export const JobCard = ({ data }) => {
                 <Button size={'small'} className={'list-btn'} variant={'contained'}>add <i className="fas fa-plus-circle"></i></Button>
                 <Button size={'small'} className={'list-btn'} variant={'contained'}>mold <i className="fas fa-tags"></i></Button>
                 <Button size={'small'} className={'list-btn'} variant={'contained'}>delete <i className="fas fa-trash-alt"></i></Button>
-                <Button size={'small'} className={'list-btn'} variant={'contained'}>info <i class="fas fa-eye"></i></Button>
+                <Button size={'small'} className={'list-btn'} variant={'contained'}>info <i className="fas fa-eye"></i></Button>
 
             </div>
             <Divider className={'divider'} />
